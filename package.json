@@ -12,5 +12,8 @@
     "express": "^4.14.1",
     "mongoose": "^4.8.1",
     "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0"
   }
 }
