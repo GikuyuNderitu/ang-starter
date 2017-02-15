@@ -7,11 +7,11 @@ const app = express()
 //DB stuff
 require('./server/utils/mongoose');
 
-// Route and route logic
-require('./server/utils/routes')(app)
-
 //Start customized middleware
 require('./server/utils/middleware')(app)
+
+// Route and route logic
+require('./server/utils/routes')(app)
 
 
 app.listen(1337, function () {

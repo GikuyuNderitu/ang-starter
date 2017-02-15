@@ -15,6 +15,6 @@ module.exports = {
 		// 		return res.render('index', values)
 		// 	}
 		// })
-		return res.render('index')
+		// return res.render('index')
 	}
 }
