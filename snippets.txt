@@ -111,7 +111,7 @@
   'Controller':
     'prefix': 'ang-cont'
     'body': """
-	<ng-include src="partials/header.html"></ng-include>
+	<header ng-include="'partials/header.html'" class=""></header>
 	<div ng-controller="$1">
 		$2
 	</div>
