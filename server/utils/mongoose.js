@@ -7,10 +7,8 @@ const DBNAME = null
 // mongoose.connect(`mongodb://localhost/${DBNAME}`)
 
 if(DBNAME) console.log(`Connected to ${DBNAME}`);
-else console.error(`CONNECT TO THE DATABASE!`);
+else console.error(`MONGOOSE REQUIRED \nBUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUT\n CONNECT TO THE DATABASE!`);
 mongoose.Promise = global.Promise
-
-console.log('Mongoose requiring');
 
 let models_path = path.join(__dirname, './../models')
 console.log(models_path);
