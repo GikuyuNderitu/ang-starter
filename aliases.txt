@@ -1,1 +1,2 @@
-alias angstarter='cp ~/path/to/ang-starter/* . -rf; echo "*/node_modules/*\n*/bower_components/*" > .gitignore; nohup node-sass -w -r --output-style compressed front-depend/style/main.sass client/assets/css/main.css &'
+alias angstarter='cp ~/path/to/ang-starter/* . -rf; echo "*/node_modules/*\n*/bower_components/*" > .gitignore; npm i; bower i; nohup node-sass -w -r --output-style compressed front-depend/style/main.sass client/assets/css/main.css &'
+alias nsass='node-sass -w -r --output-style compressed front-depend/style/main.sass client/static/css/main.css'
