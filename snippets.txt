@@ -1,0 +1,123 @@
+'.source.js':
+  'jQuery Ready':
+    'prefix': 'jqr'
+    'body': """
+		$(document).ready(function(){
+			console.log('jQuery ready!')
+			$1
+		})
+	"""
+
+  'Angular start':
+    'prefix': 'ang-start'
+    'body': """
+	var app = angular.module('app', []);
+	"""
+
+  'Angular Controller':
+    'prefix': 'ang-cont'
+    'body': """
+	app.controller('$1', ['$scope', '$2', function($scope, $2){
+		$scope.obj = {}
+		$scope.objs = []
+
+		$scope.func = function (idx) {
+
+		}
+
+		function init(){
+			$3
+		}
+		init()
+	}]);
+	"""
+
+  'Factory Index':
+    'prefix': 'ang-fac-idx'
+    'body': """
+	$1.index((err, $2) => {
+		if(err){
+			// Handle errors
+			console.log(err)
+		}else{
+			// Handle $2
+			$scope.$2 = $2
+		}
+	})$3
+	"""
+'.source.jade':
+  'HTML Init':
+    'prefix': 'html'
+    'body': """
+		doctype
+		html(lang='en')
+			head
+				meta(charset='utf-8')
+				title
+				link(rel="stylesheet", href="/css/main.css")
+			body
+				.container
+					$1
+				script(src="/js/app.js", type="text/javascript")
+	"""
+  'Include Jquery':
+    'prefix': 'jqr'
+    'body': 'script(src="/jquery/dist/jquery.min.js", type="text/javascript")'
+
+  'Include Sockets':
+    'prefix': 'jsock'
+    'body': 'script(src="/socket.io/socket.io.js" type="text/javascript")'
+
+  'Html Angular':
+    'prefix': 'ang'
+    'body': """
+		doctype
+		html(lang='en', ng-app='app')
+			head
+				meta(charset='utf-8')
+				title Basic Title
+				link(rel="stylesheet", href="/css/main.css")
+				script(type="text/javascript", src="/angular/angular.min.js")
+			body
+				.container
+					$1
+				script(src="/js/app.js", type="text/javascript")
+	"""
+
+'.text.html.basic':
+  'Angular Start':
+    'prefix': 'ang-start'
+    'body': """
+	<!DOCTYPE html>
+	<html ng-app='app'>
+		<head>
+			<meta charset="utf-8">
+			<title></title>
+			<link rel="stylesheet" href="assets/css/main.css">
+			<script src="angular/angular.min.js" charset="utf-8"></script>
+			<script src="angular-route/angular-route.min.js" charset="utf-8"></script>
+			<script src="angular-cookies/angular-cookies.min.js" charset="utf-8"></script>
+			<script src="assets/js/app.js" charset="utf-8"></script>
+			<script src="assets/js/config/routes.js" charset="utf-8"></script>
+			<script src="assets/js/factories/userFactory.js" charset="utf-8"></script>
+			<script src="assets/js/controllers/usersController.js" charset="utf-8"></script>
+		</head>
+		<body>
+			<div class="wrapper" ng-view></div>
+		</body>
+	</html>
+	"""
+
+  'Controller':
+    'prefix': 'ang-cont'
+    'body': """
+	<ng-include src="partials/header.html"></ng-include>
+	<div ng-controller="$1">
+		$2
+	</div>
+	"""
+  'Header Include':
+    'prefix': 'ng-head'
+    'body': """
+	<header ng-include="'partials/header.html'"></header>
+	"""
