@@ -9,8 +9,6 @@
   "author": "Gikuyu Nderitu",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^1.0.2",
-    "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "mongoose": "^4.8.1",
     "pug": "^2.0.0-beta11"

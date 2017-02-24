@@ -3,9 +3,8 @@ const User = mongoose.model('User');
 
 module.exports = {
 	index: function (req, res) {
-		let values = {}
-		// values.partial = 'all'
-		// console.log('Hit home route');
+		console.log('Hit home route');
+		let err = false
 		// User.find({},(err, objs) =>{
 		// 	if(err) console.log(`There was some sort of error \n ${err}`);
 		// 	else {
@@ -15,6 +14,7 @@ module.exports = {
 		// 		return res.render('index', values)
 		// 	}
 		// })
-		// return res.render('index')
+		if (err) return res.status(400).json({errors:'failure'})
+		return res.json({success:'success'})
 	}
 }

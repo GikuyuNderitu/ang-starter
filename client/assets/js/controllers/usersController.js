@@ -1,11 +1,10 @@
-app.controller('customizeUsersController', ['$scope', 'userFactory', function($scope, userFactory){
-	$scope.user = {}
-	$scope.addUser = function(){
-		console.log($scope);
-	}
-	$scope.deleteUser = function (idx) {
+app.controller('usersController', ['$scope', 'userFactory', function($scope, userFactory){
+	$scope.obj = {}
+	$scope.objs = []
+
+	$scope.func = function (idx) {
 		userFactory.delete( () => {
-			return idx
+
 		})
 	}
 }]);

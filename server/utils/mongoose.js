@@ -3,7 +3,11 @@ const fs = require('fs');
 const path = require('path');
 
 // Connect to mongoose, Overwrite mpromise, mongoose's deprecated promise implementation
-// mongoose.connect('mongodb://localhost/mongoose_dashboard')
+const DBNAME = null
+// mongoose.connect(`mongodb://localhost/${DBNAME}`)
+
+if(DBNAME) console.log(`Connected to ${DBNAME}`);
+else console.error(`CONNECT TO THE DATABASE!`);
 mongoose.Promise = global.Promise
 
 console.log('Mongoose requiring');

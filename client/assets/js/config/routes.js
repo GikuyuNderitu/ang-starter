@@ -1,9 +1,9 @@
 app.config(function($routeProvider) {
   $routeProvider
-	.when('/index', {
+	.when('/', {
 		templateUrl: 'partials/main.html'
 	})
 	.otherwise({
-		redirectTo: '/index'
+		redirectTo: '/'
 	});
 });
